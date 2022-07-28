@@ -26,5 +26,5 @@ const guessWords = async () => {
     numberOfWordsToGuess--;
     (numberOfWordsToGuess > 0) && guessWords();
 };
-
+$(".chakra-button.css-atc2dp").click();
 guessWords();
