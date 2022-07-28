@@ -19,7 +19,7 @@ const guessWords = async () => {
     }
     await sleep(1300);
     setTimeout(() => {
-        guessedWords.push($(".Toastify").textContent.normalize("NFD").replace(/\p{Diacritic}/gu, ""));
+        guessedWords.push($(".Toastify").textContent.replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U'));
         console.log(`${guessedWords.length} words guessed`);
         console.log('const words=["'+guessedWords.join('","')+'"];')
     }, 2000);
