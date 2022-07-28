@@ -17,5 +17,5 @@ const writeWords = async (words) => {
     }
     console.log("GO GO GO!")
 };
-
+$(".chakra-button.css-atc2dp").click();
 writeWords(words);
