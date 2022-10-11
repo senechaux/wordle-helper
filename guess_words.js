@@ -19,7 +19,7 @@ const guessWords = async () => {
     }
     await sleep(1300);
     setTimeout(() => {
-        guessedWords.push($(".Toastify").textContent.replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U'));
+        guessedWords.push($(".Toastify").textContent.replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U').replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
         console.log(`${guessedWords.length} words guessed`);
         console.log('const words=["'+guessedWords.join('","')+'"];')
     }, 2000);
