@@ -1,4 +1,4 @@
-const words=["pauta","enero","dudar","logro","sushi","pañal","caida","cargo","tenaz","firme","fresa","teñir"];
+const words=["pauta","enero"];
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -17,6 +17,6 @@ const writeWords = async (words) => {
     }
     console.log("GO GO GO!")
 };
-$(".chakra-button.css-atc2dp").click();
-await sleep(100);
+$(".chakra-button.css-atc2dp:nth-of-type(2)").click();
+await sleep(300);
 writeWords(words);
