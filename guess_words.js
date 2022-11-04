@@ -1,4 +1,4 @@
-let numberOfWordsToGuess = 10;
+let numberOfWordsToGuess = 15;
 let guessedWords = new Array();
 
 function sleep(ms) {
@@ -26,6 +26,6 @@ const guessWords = async () => {
     numberOfWordsToGuess--;
     (numberOfWordsToGuess > 0) && guessWords();
 };
-$(".chakra-button.css-atc2dp").click();
+$(".chakra-button.css-atc2dp:nth-of-type(2)").click();
 await sleep(300);
 guessWords();
