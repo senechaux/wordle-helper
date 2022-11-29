@@ -11,21 +11,21 @@ const guessWords = async () => {
     for (const intento of intentos) {
         const letters = Array.from(word);
         for (const letter of letters) {
-            $(".chakra-button[aria-label="+letter+"]").click(); 
+            $(".MuiButton-sizeSmall[aria-label="+letter+"]").click(); 
             await sleep(10);
         }
-        $(".chakra-button[aria-label^=procesar]").click();
+        $(".MuiButton-sizeSmall[aria-label^=procesar]").click();
         await sleep(10);
     }
     await sleep(1300);
     setTimeout(() => {
-        guessedWords.push($(".Toastify__toast:nth-of-type(1)").textContent.replace('Á','A').replace('É','E').replace('Í','I').replace('Ó','O').replace('Ú','U').replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
+        guessedWords.push($("#notistack-snackbar:nth-of-type(1)").textContent.toLowerCase().replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
         console.log(`${guessedWords.length} words guessed`);
         console.log('const words=["'+guessedWords.join('","')+'"];')
     }, 2000);
     numberOfWordsToGuess--;
     (numberOfWordsToGuess > 0) && guessWords();
 };
-$(".chakra-button.css-atc2dp:nth-of-type(2)").click();
+$(".MuiButton-containedPrimary:nth-of-type(2)").click();
 await sleep(300);
 guessWords();
