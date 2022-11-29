@@ -9,14 +9,14 @@ const writeWords = async (words) => {
         console.log('write word '+(++index)+'/'+words.length+': '+word);
         const letters = Array.from(word);
         for (const letter of letters) {
-            $(".chakra-button[aria-label="+letter+"]").click(); 
+            $(".MuiButton-sizeSmall[aria-label="+letter+"]").click();
             await sleep(50);
         }
-        $(".chakra-button[aria-label^=procesar]").click();
+        $(".MuiButton-sizeSmall[aria-label^=procesar]").click();
         await sleep(1300);
     }
     console.log("GO GO GO!")
 };
-$(".chakra-button.css-atc2dp:nth-of-type(2)").click();
+$(".MuiButton-containedPrimary:nth-of-type(2)").click();
 await sleep(300);
 writeWords(words);
