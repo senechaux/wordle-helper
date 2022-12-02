@@ -18,11 +18,10 @@ const guessWords = async () => {
         await sleep(10);
     }
     await sleep(1300);
-    setTimeout(() => {
-        guessedWords.push($("#notistack-snackbar:nth-of-type(1)").textContent.toLowerCase().replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
-        console.log(`${guessedWords.length} words guessed`);
-        console.log('const words=["'+guessedWords.join('","')+'"];')
-    }, 2000);
+    
+    guessedWords.push($("#notistack-snackbar:nth-of-type(1)").textContent.toLowerCase().replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
+    console.log(`${guessedWords.length} words guessed`);
+    console.log('const words=["'+guessedWords.join('","')+'"];');
     numberOfWordsToGuess--;
     (numberOfWordsToGuess > 0) && guessWords();
 };
