@@ -10,13 +10,11 @@ const writeWords = async (words) => {
         const letters = Array.from(word);
         for (const letter of letters) {
             $(".MuiButton-sizeSmall[aria-label="+letter+"]").click();
-            await sleep(50);
         }
         $(".MuiButton-sizeSmall[aria-label^=procesar]").click();
-        await sleep(1300);
+        await sleep(900);
     }
     console.log("GO GO GO!")
 };
 $(".MuiButton-containedPrimary:nth-of-type(2)").click();
-await sleep(300);
 writeWords(words);
