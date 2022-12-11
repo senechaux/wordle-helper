@@ -15,7 +15,7 @@ const guessWords = async () => {
         }
         $(".MuiButton-sizeSmall[aria-label^=procesar]").click();
     }
-    await sleep(900);
+    await sleep(1200);
     
     guessedWords.push($("#notistack-snackbar:nth-of-type(1)").textContent.toLowerCase().replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
     console.log(`${guessedWords.length} words guessed`);
