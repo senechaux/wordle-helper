@@ -12,12 +12,10 @@ const guessWords = async () => {
         const letters = Array.from(word);
         for (const letter of letters) {
             $(".MuiButton-sizeSmall[aria-label="+letter+"]").click(); 
-            await sleep(10);
         }
         $(".MuiButton-sizeSmall[aria-label^=procesar]").click();
-        await sleep(10);
     }
-    await sleep(1300);
+    await sleep(900);
     
     guessedWords.push($("#notistack-snackbar:nth-of-type(1)").textContent.toLowerCase().replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u'));
     console.log(`${guessedWords.length} words guessed`);
@@ -26,5 +24,4 @@ const guessWords = async () => {
     (numberOfWordsToGuess > 0) && guessWords();
 };
 $(".MuiButton-containedPrimary:nth-of-type(2)").click();
-await sleep(300);
 guessWords();
